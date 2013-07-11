@@ -1,0 +1,922 @@
+/* --------------------------------------------------------------------- */
+/*                Style Oncampus Theme (oncampus.css)                   */
+/* --------------------------------------------------------------------- */
+
+* { margin:0; padding:0;}
+html { background-color:#f2e1d5;}
+body { font-family: Arial; font-size:12px; color:#3d4258; background-repeat:repeat-x;
+	  background-color:#f2e1d5; background-image:url([[pix:theme|pagebg]]);
+	  margin:0px; width:auto;}
+.clearer {clear: both;}
+
+
+/* --- Allgemeine Textformate + Objetabstand --- */ 
+p {font-family: Arial; color:#3d4258; margin: 0.5em 0;}
+a {text-decoration: none; color:#ae181a;}
+a:hover {text-decoration: none; color:#6b0a0b;}
+h1, h2, h3 {padding-left:2px; margin:0.5em 0;}
+h1.headermain {color: #fff;}
+
+#region-main h1, #region-main h2, #region-main h3 {padding-left: 0px; color:#3D4258;}
+h2.main {color: #3D4258; text-align: left; padding:5px 0 5px 20px; font-size:17px; 
+	margin-top: 0; font-weight:200; border-width:1px 0px; border-style:solid; 
+	border-color:#C4C6CD;}
+h2.headingblock {color: #3D4258; text-align: left; padding:5px 0 5px 20px; 
+	font-size:17px; font-weight:200; margin-top: 0; border-width:1px 0px; 
+	border-style:solid; border-color:#C4C6CD;}
+
+table { margin-left: 0px; margin-right: 10px;}
+hr {height:1px; background-color:#B7B7B7; border:none;}
+input[type="checkbox"], input[type="radio"] { margin-right: 4px;}
+
+
+/* --- Linien für Tabellenzellen --- */
+.box tr, .box td, .box th {border:1px solid #B7B7B7;}
+#tempform  .box tr, #tempform  .box td, #tempform .box th {border:0px solid #B7B7B7;}
+.message.box tr, .message.box td, .message.box th {border:none;}
+#authmenu .box tr, #authmenu .box td, #authmenu .box th {border:0px;} /* Ausnahme */
+
+
+/* -- Schatten Seitenbereich-- */
+#page-header {
+-moz-box-shadow: -10px 0px 10px 0px #a93c41, 0px 10px 10px 0px #a93c41;
+-webkit-box-shadow: -10px 0px 10px 0px #a93c41, 10px 0px 10px 0px #a93c41;
+box-shadow: -10px 0px 10px 0px #a93c41, 10px 0px 10px 0px #a93c41;
+}
+#page-content {
+-moz-box-shadow:  0px 0px 10px 10px #cbb9ac;
+-webkit-box-shadow:  0px 0px 10px 10px #cbb9ac;
+box-shadow:  0px 0px 10px 10px #cbb9ac;
+}
+
+/* -- Seitenlayout: Kopfbereich + Grafiken -- */
+#page-header {height:210px; background-image:url([[pix:theme|header]]); 
+			 background-color: #ffffff; background-repeat:repeat-x;}
+			 
+#header {height:206px; background-image:url([[pix:theme|header72dpi]]); 
+		background-repeat:no-repeat;}
+#page-content {background-image:url([[pix:theme|header72dpi]]); background-color: #ffffff; 
+			  background-repeat:no-repeat; background-position: left -205px ;}
+		
+#header-visuell {height:206px; width:100%; background-color:transparent;  
+				background-repeat:no-repeat; background-position:right 0px;
+				background-image:url([[pix:theme|visuell96dpi]]);}
+#page-visuell{background-image:url([[pix:theme|visuell96dpi]]);	background-color: transparent; 
+			  background-repeat:no-repeat; background-position: right -205px ;}
+
+.headermenu {color:#3D4258; height:100px; margin:10px 10px 0px 10px;}
+.headermenu a {color:#AE181A;}
+.headermenu a:hover {color:#6B0A0B;}
+.langmenu {margin-top:-90px;}
+.logininfo {margin-top:82px;}
+
+.navbar {padding-top:11px; top:6px; height:74px; padding-left: 16px; overflow:visible; 
+		 position:relative; margin-bottom:-10px; position: static;}	  
+.navbar .invisiblefieldset {margin-top:18px;margin-right:4px;}
+.breadcrumb {padding-left:2px; margin-top:24px;}
+.breadcrumb li, .breadcrumb li a {color:#3d4258;}
+
+/* Home-Button */	
+#homeimage {	width:67px; height:67px; margin-top:7px; margin-left:-5px; float:left;}
+.ie7 #homeimage {margin-top:12px;}
+#homeimage a{width:67px; height:67px; display:block; background-image:url([[pix:theme|home96dpi]]);
+			background-repeat:no-repeat; background-position:0 0;}
+#homeimage a:hover{background-position:0 -67px;}
+
+/* Bearbeiten-Button */
+#page-header .navbar .navbutton .singlebutton input {width:96px; height:66px; padding: 90px 0 0 0; 
+		font-size:8px; background-image:url([[pix:theme|edit96dpi]]); background-position:0px -12px; 
+		background-repeat:no-repeat; background-color:transparent; overflow: hidden; 
+		cursor: pointer; cursor: hand; margin-top: -12px; margin-right:10px; border: 0;}
+.ie7 #page-header .navbar .navbutton .singlebutton input {height:85px;}
+#page-header .navbar .navbutton .singlebutton input:hover {background-position:0px -119px;}
+.editing #page-header .navbar .navbutton .singlebutton input {background-position:0px -225px;}
+.editing #page-header .navbar .navbutton .singlebutton input:hover {background-position:0px -332px;}
+
+/* Suchfeld im Kopfbereich */
+#header .forumsearch {margin-right:10px; margin-top:5px; display:block;}	
+#header .forumsearch form{display:block;margin-top:18px;}
+
+
+/* -- Fußbereich der Seite -- */
+#footerlinks{color:#3d4258;}
+#footerlinks a {color:#3d4258;}
+#footerlinks a:hover {color:#ae181a;}
+.sitelink {padding-top:10px; padding-bottom:10px;}
+
+/* -- Blöcke im Seitenbereich -- */
+#sidebars .block {background-color: #dfe0e5; border: 0px; width:210px;}
+#sidebars .block .header .title {color: #FFF;}
+#sidebars .block .header  {padding-top:1px;}
+#sidebars .block .header .title .block_action input {background-color: #FFF;} 
+#sidebars .block .content {border: 0px; padding: 5px; background-color: #f5f0ea;}
+#sidebars .block .content .block_tree p {font-size: 1em;}
+#sidebars .block h2 {font-size:1em; font-weight:bold;}
+#sidebars .block a {color:#ae181a;}
+#sidebars .block a:hover {color:#6b0a0b;} 
+.oublog-sideblock {padding:0px;}
+
+.block .header .commands .icon img {height: auto;margin-right: -1px; width: auto;}
+.block .header .commands {margin-bottom: -3px; margin-left: 2px; margin-right:0px; margin-top: -6px;}
+.block .header h2 {color:#3D4258;}
+.block {font-size:11px;}
+
+#region-pre .block, #region-post .block  {
+	-moz-box-shadow: -3px 2px 3px 0px #c4c6cd;
+	-webkit-box-shadow: 2px -3px 3px 0px #c4c6cd;
+	box-shadow: -3px 2px 3px 0px #c4c6cd;
+}
+
+/* --------------------------------------------------------------------- */
+/*                     Pagelayout / Seitenaufbau                         */
+/* --------------------------------------------------------------------- */
+#page {width:100%;position:relative;}
+#page-header {clear:both; float:none; width:auto; overflow:visible;}
+#page-content {clear:both;float:none;overflow:hidden; position:relative; width:auto; 
+			   min-width:auto; min-height:450px; background-color: #ffffff;}
+#page-content #region-main-box {float:none; left:auto; position:relative; width:auto; margin-bottom:15px;}
+#page-content #region-main-wrap {float:none; position:relative; right:0px; width:auto;}
+#page-content #region-main {margin-right:0px; margin-left:0px; overflow:hidden; text-align:left;
+						   min-height:300px; padding-bottom:5px; position:relative;}
+#page-content .region-content {overflow:hidden; padding:0px; top:10px;}
+#page-footer {clear:both; float:none; width:auto;}
+#footer {background-color:#f2e1d5; height:50px; margin-top:0px;}
+
+#headerwrapper {overflow:hidden; height:206px;}
+#pagewrapper {overflow:hidden;padding-bottom:0px;}
+#page-content-wrapper {overflow:hidden; margin-top:-1px;padding-bottom:20px;}
+
+#region-main, #region-pre, #region-post {padding-top:3px;}
+
+/* -- Anpassung ohne rechten Block -- */
+.side-pre-only #region-main-box {padding-left: 0px; padding-right: 0px; }
+.side-pre-only #page-content #region-main {margin-left:0px;}
+.side-pre-only #page-content #region-pre {left:auto;}
+.side-pre-only #page-content #region-post {width:230px;}
+
+
+/* --------------------------------------------------------------------- */
+/*           Anpassung mit Media Queries (Bildschirmbreiten)             */
+/* --------------------------------------------------------------------- */
+
+@media screen and (max-width: 940px) {
+/* Anpassung wegen Pagelayout */
+	#page-content {width:700px; min-width:600px;}
+	#page-content #region-main-box {width:700px;}
+	#page-content #region-main-wrap {width:700px;}
+	#page-content #region-main {width:660px; margin-left:20px;}
+	#page-content, #page-header, #page-footer, .pagelayout-report #page-content {width: 700px; margin: 0 auto;}
+	
+	#page-content #region-pre {float:left;left:0px;overflow:hidden;position:relative;width:230px;margin-left:10px;}
+	#page-content #region-post {float:left;left:0px;overflow:hidden;position:relative; width:230px;margin-left:10px;}
+	.side-pre-only #page-content #region-main {margin-left:20px;} /* Anpassung ohne rechten Block */
+		
+	#sidebars {margin-top:5px; margin-left:7px;}		
+	#region-pre {float: left; width:460px;}
+	#region-post {float: left;}
+	#sidebars .block {float: right; margin-right: 15px;}
+	
+	/* Anpassung Breadcrumb-Navigation abhängig von Bildschirmbreite */	
+	.breadcrumb {max-width:540px;}
+	.breadcrumb-popup {max-width:100%;}
+}
+/* --------------------------------------------------------------------- */
+@media screen and (min-width: 941px) and (max-width: 1195px) {
+	/* Anpassung Pagelayout / Seitengröße */
+	
+	#page-content, #page-header, #page-footer, .pagelayout-report #page-content {width: 920px; margin: 0 auto;}
+	#page-content #region-main {float: right; position: relative; width: 655px; min-height:450px; margin-right:20px; }
+	#region-main-box {clear:both;}
+	#region-main-wrap {float:right;}
+	#page-footer {position:relative; margin-top:0px; margin-bottom:20px;	}
+	
+	.pagelayout-base #region-main-box, .pagelayout-login #region-main-box, .pagelayout-popup #region-main-box,
+	.pagelayout-maintenance #region-main-box, .pagelayout-print #region-main-box {
+		padding-left:35px; padding-right:35px;} /* Ohne Blöcke rechts und links: */
+		
+	.pagelayout-base #page-content #region-main, .pagelayout-login #page-content #region-main, 
+	.pagelayout-popup #page-content #region-main, .pagelayout-maintenance #page-content #region-main, 
+	.pagelayout-print #page-content #region-main {float:left; margin-right:0px; margin-left:0px; position:relative;
+		width:100%;	min-height:450px;} /* Ohne Blöcke links: */
+		
+	.pagelayout-base #page-content #region-main-wrap {padding-left:35px; padding-right:35px;}
+	
+	/* Anpassung Position Blöcke */
+	#page-content #region-pre {float:left;left:0px; overflow:hidden; position:relative; width:230px; margin-left:10px;}
+	#page-content #region-post {float:left;left:0px; overflow:hidden; position:relative; width:230px; margin-left:10px;}
+	.side-pre-only #page-content #region-pre {left:0px;} /* Anpassung ohne rechten Block */
+	#sidebars {float:left; width:230px;}
+	#region-pre .block{margin-left:10px; float:left; position:relative;}
+	#region-post .block{	margin-left:10px; float:left; position:relative; margin-bottom:20px;}
+	
+	/* Anpassung Breadcrumb-Navigation abhängig von Bildschirmbreite */	
+	.breadcrumb {max-width:540px;}
+	.breadcrumb-popup {max-width:100%;}
+} 
+/* --------------------------------------------------------------------- */
+@media screen and (min-width: 1196px) {
+	/* Anpassung Pagelayout Seitengröße*/
+	#page-content, #page-header, #page-footer {width: 95%; margin: 0 auto;}
+	.pagelayout-report #page-content {width:95%;}
+	
+	body {min-width: 690px; }
+	#page-content .colpos {position:relative;float:left;}
+	#region-main-box {padding-left: 250px; padding-right: 250px;}
+	#region-main {width: 100%; position: relative; float: left;}
+	#footer {clear: both;}
+	
+	/* Anpassung Seitenaufbau mit und ohne Blöcke */
+	.pagelayout-base #region-main-box, .pagelayout-login #region-main-box, .pagelayout-popup #region-main-box,
+	.pagelayout-maintenance #region-main-box, .pagelayout-print #region-main-box{
+		padding-left:35px; padding-right:35px;} 
+	
+	.pagelayout-base #region-main, .pagelayout-login #region-main, .pagelayout-popup #region-main,
+	.pagelayout-maintenance #region-main, .pagelayout-print #region-main {
+		float:left; margin-right:0px; margin-left:0px; position:relative; width:100%; min-height:300px;}
+	
+	.pagelayout-base #page-content #region-main-wrap {padding-left:35px;padding-right:35px;}	
+	.pagelayout-admin #region-main-box, .pagelayout-report #region-main-box {padding-left:255px; padding-right:20px;}
+	.pagelayout-admin #region-main, .pagelayout-report #region-main{
+		float:left; margin-right:0px; margin-left:0px; position:relative; width:100%; min-height:300px;}	
+	
+	/* Anpassung Position Blöcke */
+	#page-content #region-pre {float:left; left:auto; overflow:hidden; position:relative; width:230px; right:240px; margin-left:-100%;   }
+	#page-content #region-post {float:left; left:15px; overflow:hidden; position:relative; width:230px; margin-right:-230px;  }
+	.side-pre-only #region-main-box {padding-left: 250px; padding-right: 20px;} /* Anpassung ohne rechten Block */
+	
+	#page-content #region-pre .block{margin-left:10px;}
+	#page-content #region-post .block{margin-left:5px;}
+}
+/* --------------------------------------------------------------------- */
+/*              Anpassung Internet Explorer (IE8 + IE7)                  */
+/* --------------------------------------------------------------------- */
+	
+/* ------------------------  Anpassung IE8  ---------------------------- */
+
+	/* Anpassung Pagelayout (Seitengröße + Aufbau)*/
+	body.ie8  {min-width: 1024px;} /* kleinste Darstellungsgröße der Website beschränken */
+	.ie8 #page-content, .ie8  #page-header, .ie8  #page-footer {width: 96%; margin: 0 auto;}
+	.ie8.pagelayout-report #page-content {width:96%;} 
+	.ie8 #region-main-box {padding-left: 250px; padding-right: 250px; }
+	.ie8 #region-main {width: 100%; position: relative; float: left;}
+	
+	.ie8 #page-content .colpos{position:relative;float:left;}
+	
+	.ie8.pagelayout-base #region-main-box, .ie8.pagelayout-login #region-main-box, .ie8.pagelayout-popup #region-main-box,
+	.ie8.pagelayout-maintenance #region-main-box, .ie8.pagelayout-print #region-main-box{
+			padding-left:35px; padding-right:35px;}
+
+	.ie8.pagelayout-base #region-main, .ie8.pagelayout-login #region-main, .ie8.pagelayout-popup #region-main,
+	.ie8.pagelayout-maintenance #region-main, .ie8.pagelayout-print #region-main {
+			float:left; margin-right:0px; margin-left:0px; position:relative; width:100%; min-height:300px;}
+	
+	.ie8.pagelayout-base #page-content #region-main-wrap {padding-left:35px;padding-right:35px;}
+	.ie8.pagelayout-admin #region-main-box, .ie8.pagelayout-report #region-main-box {padding-left:255px; padding-right:20px;}
+	.ie8.pagelayout-admin #region-main, .ie8.pagelayout-report #region-main{
+		float:left; margin-right:0px; margin-left:0px; position:relative; width:100%; min-height:300px;}
+	
+	/* Anpassung ohne rechten Block */
+	.ie8.side-pre-only #region-main-box {padding-left: 250px; padding-right: 20px;} 
+	
+	/* Anpassung Position Blöcke */ 
+	.ie8 #page-content #region-pre {float:left;left:auto;overflow:hidden;position:relative;width:230px; right: 240px; margin-left:-100%;}
+	.ie8 #page-content #region-post {float:left;left:15px;overflow:hidden;position:relative;width:230px; margin-right: -230px;}
+	
+	.ie8 #page-content #region-pre .block{margin-left:10px;}
+	.ie8 #page-content #region-post .block{margin-left:5px;}
+	
+	/* Seitenbereich einrahmen */
+	.ie8 #page-content {border-left:1px solid #b7b7b7;border-right:1px solid #b7b7b7; border-bottom:1px solid #b7b7b7;}
+	.ie8 #page-header {border-left:1px solid #b7b7b7;border-right:1px solid #b7b7b7;}
+
+	/* Blöcke einrahmen */
+	.ie8 #region-pre .block, .ie8 #region-post .block  {border:1px solid #b7b7b7;}
+	
+/* ------------------------  Anpassung IE7  ---------------------------- */
+	
+	/* Anpassung wegen Pagelayout (Seitenbreite + Aufbau) */
+	body.ie7  {min-width: 1024px;} /* kleinste Darstellungsgröße der Website beschränken */
+	.ie7 #page-content, .ie7  #page-header, .ie7  #page-footer {width: 96%; margin: 0 auto;}
+	.ie7.pagelayout-report #page-content {width:96%;}
+	.ie7 #region-main-box {padding-left: 250px; padding-right: 250px;}
+	.ie7 #region-main {width: 100%; position: relative; float: left;}
+
+	.ie7 #page-content .colpos{position:relative;float:left;}
+	
+	.ie7.pagelayout-base #region-main-box, .ie7.pagelayout-login #region-main-box, .ie7.pagelayout-popup #region-main-box,
+	.ie7.pagelayout-maintenance #region-main-box, .ie7.pagelayout-print #region-main-box{padding-left:35px; padding-right:35px;}
+	
+	.ie7.pagelayout-base #region-main, .ie7.pagelayout-login #region-main, .ie7.pagelayout-popup #region-main,
+	.ie7.pagelayout-maintenance #region-main, .ie7.pagelayout-print #region-main {
+		float:left; margin-right:0px; margin-left:0px; position:relative; width:100%; min-height:300px;}
+		
+	.ie7.pagelayout-base #page-content #region-main-wrap {padding-left:35px;padding-right:35px;}
+	.ie7.pagelayout-admin #region-main-box, .ie7.pagelayout-report #region-main-box {padding-right:20px;}
+	.ie7.pagelayout-admin #page-content #region-pre, .ie7.pagelayout-report #page-content #region-pre {left:30px;}
+		
+	/* Anpassung Position Blöcke */ 
+	.ie7 #page-content #region-pre {float:left;left:260px;overflow:hidden;position:relative;width:230px;margin-left:-100%;}
+	.ie7 #page-content #region-post {float:left;left:15px;overflow:hidden;position:relative;width:230px; margin-right: -230px;}
+
+	/* Anpassung Seite ohne rechten Block */
+	.ie7.side-pre-only #region-main-box {padding-left: 250px; padding-right: 20px;} 
+	.ie7.side-pre-only #page-content #region-pre {left:30px;} 
+	
+	.ie7 #page-content #region-pre .block{margin-left:10px;}
+	.ie7 #page-content #region-post .block{margin-left:5px;}
+	
+	/* Seitenbereich einrahmen */
+	.ie7 #page-content {border-left:1px solid #b7b7b7;border-right:1px solid #b7b7b7; border-bottom:1px solid #b7b7b7;}
+	.ie7 #page-header {border-left:1px solid #b7b7b7;border-right:1px solid #b7b7b7;}
+	
+	/* Blöcke einrahmen */
+	.ie7 #region-pre .block, .ie7 #region-post .block  {border:1px solid #b7b7b7;}
+	
+	/* Ende Anpassung Internet Explorer (IE8 + IE7) */
+
+/* --------------------------------------------------------------------- */
+/*                Anpassung Tablets (portrait + landscape)               */
+/* --------------------------------------------------------------------- */
+
+/* -------  Anpassung des CSS an Tablets (landscape/horizontal)  ------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) {
+	/* Anpassung Pagelayout */	
+	#page-content, .pagelayout-report #page-content {width: 100%; margin: 0; min-height:345px;}
+	#page-header, #page-footer {width: 100%; margin: 0;}
+	#page-content #region-main {float:right; position:relative; width:700px; min-height:345px; margin-right:25px;}
+	#region-main-box {clear:both;}
+	#page-content .region-content {padding-right:2px;}
+	#region-main-wrap {float:right;}
+	
+	#page-footer {position:relative; margin-top:0px; margin-bottom:20px; }
+	#footer {padding-bottom:5px;}
+	#theme_switch_link {padding-bottom:10px;}
+	
+	.pagelayout-base #region-main-box, .pagelayout-login #region-main-box, .pagelayout-popup #region-main-box,
+	.pagelayout-maintenance #region-main-box, .pagelayout-print #region-main-box {
+		padding-left:35px; padding-right:35px;} /* Ohne Blöcke links */
+		
+	.pagelayout-base #page-content #region-main, .pagelayout-login #page-content #region-main, 
+	.pagelayout-popup #page-content #region-main, .pagelayout-maintenance #page-content #region-main, 
+	.pagelayout-print #page-content #region-main {float:left; margin-right:0px; margin-left:0px; 
+	position:relative; width:100%; min-height:345px;} /* Ohne Blöcke links */
+		
+	.pagelayout-base #page-content #region-main-wrap {padding-left:35px;padding-right:35px;}
+	
+	/* Anpassung Position Blöcke  */
+	#sidebars {float:left; width:230px;}
+	#page-content #region-pre {float:left; left:0px; overflow:hidden; position:relative; width:230px; margin-left:10px;}
+	#page-content #region-post {float:left; left:0px; overflow:hidden; position:relative; width:230px; margin-left:10px;}
+	
+	/* Anpassung ohne rechte Blöcke */
+	.side-pre-only #region-main-box {padding-left:0px; padding-right: 0px;}
+	.side-pre-only #page-content #region-pre {left:0px;}
+	
+	#region-pre .block{margin-left:10px; float:left; position:relative;}
+	#region-post .block{margin-left:10px; float:left; position:relative; margin-bottom:20px;}
+	
+	/* Anpassung Breadcrumb-Navigation abhängig von Bildschirmbreite */
+	.breadcrumb {max-width:640px;}
+	.breadcrumb-popup {max-width:100%;}
+	
+	/* Anpassung Home-Button */
+	#homeimage {	margin-top:5px;}
+	
+	/* Upload-Pfeil-Grafik verschieben */
+	.dndupload-arrow {margin:auto 45%;}
+}
+
+
+/* --------  Anpassung des CSS an Tablets (portraite/hochkant)  -------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
+/* Anpassung Pagelayout */
+	#page-content, #page-header, #page-footer, .pagelayout-report #page-content {width: 100%; margin:0px;}
+	#page-content #region-main-box {width:100%; min-height:800px; padding-left:0px; padding-right:0px;}
+	#page-content #region-main-wrap {width:100%; margin:0px; left:35px;}
+	#page-content .region-content {padding-right:2px;}
+	#page-content #region-main {text-align:left; left:0px; width:93%; float:left; min-height:200px; 
+							 margin:0px; min-height:345px; position:relative;}
+	.pagelayout-base #page-content #region-main, .pagelayout-login #page-content #region-main, 
+	.pagelayout-popup #page-content #region-main, .pagelayout-maintenance #page-content #region-main, 
+	.pagelayout-print #page-content #region-main {float:none; margin-right:0px; margin-left:0px; position:relative; width:93%; min-height:345px; padding-left:35px;} /* Ohne Blöcke links: */
+	
+	.pagelayout-base #region-main-box, .pagelayout-login #region-main-box, .pagelayout-popup #region-main-box,
+	.pagelayout-maintenance #region-main-box, .pagelayout-print #region-main-box {
+		padding-left:0px; padding-right:0px;} /* Ohne Blöcke rechts und links: */
+		
+	.pagelayout-base #page-content #region-main-wrap {padding-left:0px; padding-right:0px;}
+	.pagelayout-popup #page-content #region-main {padding-left:0px; padding-right:0px;}
+	
+	/* Anpassung Fußbereich */
+	#page-footer {position:relative; margin-top:0px; margin-bottom:20px; margin:0px;}
+	#footer {padding-bottom:10px;}
+	#theme_switch_link {padding-bottom:15px;}
+	
+	/* Anpassung ohne rechten Block */
+	.side-pre-only #region-main-box {padding-left: 35px; padding-right: 35px;}
+	.side-pre-only #page-content #region-pre {left:0px;}
+	
+	/* Anpassung Position Blöcke */
+	#sidebars {margin-top:30px; margin-bottom:20px; margin-left:25px; width:500px; position:relative;}
+	#sidebars .block {float: right; margin-right:15px;}
+	#page-content #region-pre {float:left;left:0px;overflow:hidden;position:relative;width:230px;margin-left:10px;}
+	#page-content #region-post {float:left;left:0px;overflow:hidden;position:relative;width:230px;margin-left:10px;}
+	
+	/* Anpassung Breadcrumb-Navigation abhängig von Bildschirmbreite */
+	.breadcrumb {max-width:640px;}
+	.breadcrumb-popup {max-width:100%;}
+	
+	/* Anpassung Home-Button */
+	#homeimage {margin-top:5px;}	
+	
+	/* Upload-Pfeil-Grafik verschieben */
+	.dndupload-arrow {margin:auto 45%;}
+}
+
+
+/* ----------- Grafiken in höherer Auflösung für Tablets --------------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+	/* Grafikbereitstellung für Tabletts -> Bilder mit höherer Auflösung */
+	/* Grafik links Logo mit Hintergrundgrafik im Kopfbereich und hinter dem Contentbereich */
+	#header {background-image:url([[pix:theme|header160dpi]]); background-size:412px 383px;	
+			padding-bottom:0px; margin-bottom:0px;}
+	#page-content {background-image:url([[pix:theme|header160dpi]]); background-size:412px 383px;}
+	
+	/* Grafik im Hintergrund rechts im Kopf- und Contentbereich*/
+	#header-visuell {background-image:url([[pix:theme|visuell300dpi]]); background-size:269px 513px;
+			padding-bottom:0px; margin-bottom:0px;}
+	#page-visuell{background-image:url([[pix:theme|visuell300dpi]]); background-size:269px 513px;
+			padding-bottom:0px; margin-bottom:0px;}
+	
+	/* Home-Button */
+	#homeimage {	padding-bottom:0px; margin-bottom:0px;}
+	#homeimage a{background-image:url([[pix:theme|home300dpi]]); background-size:67px 133px;
+			background-position:0 0; padding-bottom:0px; margin-bottom:0px;}
+	#homeimage a:hover{background-image:url([[pix:theme|home300dpi]]); background-size:67px 133px; 
+			background-position:0 -67px; padding-bottom:0px; margin-bottom:0px;}
+	
+	/* Bearbeiten-Button */
+	#page-header .navbar .navbutton .singlebutton input {background-image:url([[pix:theme|edit300dpi]]);
+			background-size:107px 427px; background-position:0px -12px; margin-top:-10px; margin-right:10px;}		
+	#page-header .navbar .navbutton .singlebutton input:hover {	background-image:url([[pix:theme|edit300dpi]]); 
+			background-size:107px 427px; background-position:0px -119px;}
+	.editing #page-header .navbar .navbutton .singlebutton input {background-image:url([[pix:theme|edit300dpi]]); 
+			background-size:107px 427px; background-position:0px -226px;}
+	.editing #page-header .navbar .navbutton .singlebutton input:hover {background-image:url([[pix:theme|edit300dpi]]);
+			background-size:107px 427px; background-position:0px -333px;}
+			
+}
+
+
+/* --------------- Logo Anpassung für Retin-Displays ------------------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2){
+	/*Austausch der Grafiken im Kopfbereich für Retina-Displays */
+	#header {background-image:url([[pix:theme|header300dpi]]);}
+	#page-content {background-image:url([[pix:theme|header300dpi]]);}
+}
+	/* -- Ende Anpassung für Tabletts -- */
+	
+	
+/* --------------------------------------------------------------------- */
+/*             Formatanpassung der Elemente im Seitenbereich             */
+/* --------------------------------------------------------------------- */
+
+/* Accesshide*/
+h2.accesshide {position:relative;left:0px;color: #222; text-align: left; padding:5px 0 5px 10px; font-size:17px; font-weight:200; 
+			  margin-top: 0; border-width:1px 0px; border-style:solid; border-color:#b7b7b7;margin-left:0px;}
+
+
+/* Startseite Laufende Kursübersicht*/
+#region-main .block {border-color:#c4c6cd;}
+.coursebox {margin-bottom:0px; padding-bottom:1px; margin-top:2px;padding-left:0px; border-bottom:1px solid #E7E7E7;}
+.coursebox .info .name {margin: 5px 0 3px 0; padding-left:10px;}
+.coursebox .info .name a {font-size:13px;}
+.coursebox .summary {padding-top:6px;}
+.coursebox  .summary .no-overflow {padding-bottom:0px;}
+.coursebox  .summary .no-overflow  p {margin-bottom:2px;}
+.teachers {margin-top:0px; margin-left:2.5em;}
+.addcoursebutton .singlebutton {text-align: center;}
+.coursebox h3.main{font-size:13px;}
+
+
+/* Einstellungen zu einzelnen Bloecken */
+.block_settings_navigation_tree .content .footer {text-align: center;}
+.block_settings_navigation_tree .content .footer .adminsearchform {margin-left: 5%; width: 90%; font-size: 9pt;}
+.block_settings_navigation_tree .content .footer .adminsearchform #adminsearchquery {width: 95%;}
+
+.block_calendar_month .content .calendar-controls a { color: #3a3f53; font-weight: bold;}
+.block_calendar_month .content .minicalendar td {border-color: #f5f0ea;}
+.block_calendar_month .content .minicalendar .day {color: #3a3f53; background-color: #f5f0ea;}
+.block_calendar_month .content .minicalendar .day a {color: #FFF000;}
+.block_calendar_month .content .minicalendar .weekdays th { border-width: 0; font-weight: bold; color:#3a3f53;}
+.block_calendar_month .content .minicalendar .weekdays abbr {border-width: 0; text-decoration: none;}
+.block_calendar_month .content .minicalendar .today {border:1px solid #3a3f53; color:#3a3f53; background-color:#fef8cf;} 
+.block_calendar_month .content .minicalendar .today a{color:#3a3f53;}
+.block_calendar_month .content .calendar-controls .current a {color:#ae181a;}
+.block_calendar_month .filters a {font-size:11px;}
+
+.tree_item.leaf {vertical-align:middle;}
+.tree_item.leaf a{vertical-align:middle;}
+
+.block_tree_box .block_tree hr {background-color:#B7B7B7; border-width:0px; height:1px;}/* Trenner im Block */
+.block_settings .block_tree li.item_with_icon > p img {top:-2px;}
+.block_settings .block_tree .tree_item {margin: 5px 0; padding-left: 20px; text-align: left;}
+.block_navigation .block_tree li.item_with_icon > p img {top:-2px;}
+
+.block_myprofile img.profilepicture {height:60px; width:60px;margin-top:2px;}
+.block_myprofile .myprofileitem.fullname {font-size:1.2em;margin-top:2px;}
+.block_messages .content .info {padding-right:10px;}
+.block_webkonf .content img {padding-left:12px; padding-top:1px;padding-bottom:1px;}
+.tag_cloud .s20 {font-size:1.1em;} /* Schlagwoerter */
+span.flagged-tag, span.flagged-tag a {color:#e30613;} /* Hervorgehobenes Schlagwoerter */
+
+/* Kalender im Block */
+.block .minicalendar {width:100%; margin:-5px auto 20px auto;}
+.block .minicalendar th {padding:2px;font-size:0.8em; border-color:#F5F0EA;}
+.block .minicalendar td {padding:2px;font-size:0.8em; border-color: #F5F0EA;}
+.block .minicalendar td.weekend {color:#3a3f53;}
+.block .minicalendar .weekdays abbr {border-width: 0;text-decoration: none;}
+.block .minicalendar .day {color: #3a3f53;background-color: #f5f0ea;}
+.block .minicalendar .day a{color:#FFF000;}
+
+.calendartable th, .calendartable td {border-color:#C4C6CD; color:#3D4258;}
+.calendartable th {border-bottom-color:#3D4258;}
+
+.calendar_filters table td, .calendar_filters table th {padding:0.1em;}
+
+/* Formate Boxen Inhaltsbereich */
+#region-main-wrap .box hr{background-color:#B7B7B7; height:1px; border-width:0px;}
+#region-main-wrap .section{border-color:#C4C6CD;}
+#region-main-wrap .skip-block .header {padding-top:3px; padding-bottom:3px;}
+.categorybox .category {font-size: 1.1em; font-weight: bold; padding-left:25px;}
+.categorybox .category a  {font-size: 1.1em;}
+
+.generalbox {border:0px; text-align:left; color:#3D4258;} /* Content im Hauptbereich z.B. beim Popup */
+#embedded-content { margin:35px;}
+#menucapability {width:100%; margin-top:8px;margin-bottom:16px;}
+
+
+/* Ausrichten der Symbole zum Text */
+img.icon {vertical-align:middle;padding-right:4px;height:auto;width:auto;}
+img.iconsmall {vertical-align:middle;height:auto;width:auto;}
+img.iconhelp {margin-left:3px; margin-right:3px;vertical-align:middle;height:auto;width:auto;}
+img.icontoggle {vertical-align:middle; width:auto; height:auto;}
+img.iconkbhelp {height:auto;width:auto;}
+img.emoticon {vertical-align: middle; width:auto; height:auto;}
+.helplink img {vertical-align: middle; height:auto; width:auto;}
+
+/* OU-Blog Anpassung */
+.modtype_oublog  .mod-indent .activityicon{ margin-top:0px; padding-top:0; vertical-align:middle;}
+.modtype_oublog  .mod-indent .instancename{ margin-top:0px; padding-top:0; vertical-align:middle;}
+.course-content .section .activity img.activityicon {height: auto; width: auto;}
+
+/* Formate Inhaltsbereich Kursbereiche */
+.section .content{padding-top:2px; padding-bottom:5px;}
+.course-content .topics .section {border-bottom:1px solid #B7B7B7;}
+.course-content .topics .section ul {border-bottom:none; margin-top:5px; margin-bottom:5px;}
+.course-content .topics .section .mod-indent .no-overflow {margin-bottom: 0px; margin-top:5px;}
+.course-content .topics .section .mod-indent .no-overflow p{margin-bottom: 2px;}
+.course-content .topics .section .mod-indent {margin-bottom:1px;}
+
+.course-content .weeks .section {border-bottom:1px solid #B7B7B7;}
+.course-content .weeks .section ul {border-bottom:none;}
+.course-content .weeks .section .mod-indent .no-overflow {margin-bottom: 0px; margin-top:8px;}
+.course-content .weeks .section .mod-indent .no-overflow p{margin-bottom: 3px;}
+.course-content .weeks .section .mod-indent {margin-bottom:5px;}
+
+.course-content ul.topics li.section .content {margin: 0 20px;}
+.course-content ul.topics li.section .left {width: 15px;}
+.course-content ul.topics li.section .right {width: 15px;}
+.course-content #changenumsections {margin-top:5px;}
+
+.course-content .current {background: none repeat scroll 0 0 #fff;}
+.course-content .current .content {margin: 0 40px; padding-left: 10px;}
+.course-content ul.weeks li.section .content { padding-left: 10px;}
+.paging {padding-top:5px; padding-bottom:10px; margin-bottom:10px;}
+
+
+/* Formate Kurs-Icons Inhaltsbereich*/	
+.course-content .section .activity .commands img {padding-right:0px;margin-right:0px;padding-left:0px;}
+.course-content .section .activity .commands img.iconsmall {vertical-align: middle; padding-bottom:1px;}
+
+/* Kursbereiche Kategorielisten */
+.categorylist {border-bottom:1px solid #B7B7B7; padding:2px 0 8px 0;}
+.categorylist .category {padding-left:5px;}
+.categorylist .indentation {margin-top:2px; min-height:15px;}
+.categorylist .indentation img {margin-top:-2px;}
+.categorylist .indentation .smallicon {margin-bottom:-3px;}
+
+.forumpost {border:1px solid #C4C6CD; padding:5px 0px 5px 0px; margin: 0 0 2em;  position:relative;}
+.forumpost .picture img {margin:0px 10px 4px 5px;}
+.forumpost.blog_entry {border:1px solid #b7b7b7;}
+
+.path-mod-forum .forumheaderlist {border-collapse: collapse; }
+.forumheaderlist {border-color:#bfbfbf;}
+.path-mod-forum .forumheaderlist td, .path-mod-forum .forumheaderlist th {border-color:#bfbfbf; border-left:0px;}
+
+
+/* Formate zu Rolen */
+.path-admin table.rolecap { margin-left: 0px; margin-right: 10px;}
+.rolecap .action-icon img{margin-bottom:-3px;}
+.rolecap td, .rolecap th{vertical-align:top; padding-top:15px; text-align:left;}
+.mceLayout {	width:435px !important;}
+.path-mod-forum .indent {padding-bottom:6px; padding-left:10px;}
+.path-mod-forum .indent .indent{padding-bottom:6px;padding-top:6px;}
+.mod_introbox {border: 1px solid #C4C6CD;}
+
+
+/* Anpassung Dialogbox */
+.chooserdialogue .moodle-dialogue-wrap {border-radius: 5px 5px 5px 5px; border: 1px solid #bfbfbf !important; }
+.chooserdialogue .moodle-dialogue-hd {border-radius: 5px 5px 0px 0px; border-bottom: 1px solid #bfbfbf !important; background: -moz-linear-gradient(center top , #FEFEFE, #D3D3D2) repeat scroll 0 0 transparent !important;}
+.chooserdialogue .moodle-dialogue-bd {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background: none repeat scroll 0 0 #F6F6F4; }
+.jsenabled .choosercontainer #chooseform .alloptions {box-shadow: 0 0 30px 0 #dddddc inset;}
+.moodle-dialogue-base .moodle-dialogue-lightbox {background-color: #666;}
+.choosercontainer #chooseform .option label {border-bottom: 1px solid #fff;}
+
+
+/* Formate Formulare */
+.mform fieldset {border:1px solid; border-color:#C4C6CD; min-width:400px; padding-top:5px;}
+.mform fieldset legend {font-weight:bold;margin-left:0.5em; color:#3D4258;}
+.mform {position:relative;}
+
+.mform .fcheckbox input {margin:5px 5px 2px 2px;}
+.mform .fitem .fitemtitle {float:left; text-align:right; width:15%; padding-right:5px; padding-top:2px;}
+.mform fieldset div div { margin-top: 5px;}
+
+.invisiblefieldset label {padding-left:5px; padding-right:5px;}
+
+#adminsettings .form-item .form-label {text-align: left; margin-right:5px; }
+#adminsettings span .form-shortname {margin-right:10px;}
+#adminsettings .form-item .form-description, #adminsettings .form-item .form-setting {margin-left:17.0em;}
+#adminsettings .form-shortname, #admin-lang .translator .strkey {font-size: 0.75em;}
+#admin-emoticons table{border-color:#bfbfbf;} /* Emotion Icons HTML-Einstellungen */
+
+
+/* Adminbereich */
+.lastinitial {margin-bottom:25px; }
+.mod-assignment-download-link {margin-bottom:10px;}
+.path-mod-assignment .late {color: #333333;}
+
+.groupinfobox  {border:0px; min-width:80%;}
+.groupinfobox tr {text-align:left; border: 1px solid #B7B7B7;  font-size:11px;}
+.boxaligncenter {margin-left: 0px; margin-right:20px;}
+.generalbox .unselectedrow {border-bottom:1px solid #dfe0e5; }
+
+#region-main .groupinfobox h3 {color:#3D4258; margin:5px 0px 5px 0px;}
+.tool_assignmentupgrade_upgradetable .generalbox .header {border-color:#C4C6CD;}
+
+#page-admin-index .adminwarning.availableupdatesinfo .moodleupdateinfo {margin: 20px 0px; text-align: left;}
+#page-admin-index .adminerror .singlebutton, #page-admin-index .adminwarning .singlebutton, 
+#page-admin-index #layout-table .singlebutton {margin-left:10px;}	
+#page-admin-tool-assignmentupgrade-listnotupgraded .tool_assignmentupgrade_upgradetable tr.selectedrow td {
+		background-color: #f8f8f7;}
+#page-admin-course-index .editcourse {margin: 20px 0;} /* vorher margin: 20px 20px */
+#page-admin-roles-usersroles p {margin:0;} /* Trennlinie für Kurslisten */
+
+#admindeviceselector img{max-width:440px;} /*-- Designauswahl Vorschaubild --*/
+
+
+/* Mitteilungen */
+.message .contactselector {float: left; width: 30%; text-align:left;}
+.message .messagearea { border-left:1px solid #dfe0e5; float: left; min-height:200px; 
+		padding-left:2%; margin-left:2%; width:auto; max-width:65%; text-align:left;}
+#combinedsearch {margin-bottom:9px;}
+#viewing {margin-top:0px;}
+.message_heading {padding-top:0px;}
+
+
+/* Formate Tabellen */
+.generaltable table {max-width:100%;margin-right:10px;} 
+.user-grade td.oddd1 {background-color:#f8f8f8; }
+.no-overflow .r0 {background-color:#f8f8f7;}
+.generaltable .header{text-align:left; border-top:1px solid #dfe0e5;border-bottom:1px solid #dfe0e5; font-size:11px;}
+.generaltable .header a {vertical-align:middle;}
+.generaltable .header img {vertical-align:middle; padding:0px;}
+.generaltable {max-width:100%;margin-right:10px; margin-top:10px;}
+#participantsform {margin-bottom:20px;}
+
+.flexible .r0 {background-color:#f8f8f7;}
+.flexible tr, .flexible th, .flexible td {border:1px solid #dfe0e5;}
+.flexible .header {border:1px solid #dfe0e5;}
+
+#attempts {font-size:10.5px;}
+#attempts .header {text-align:left; vertical-align:baseline; border-top:1px solid #dfe0e5; border-bottom:1px solid #b7b7b7; font-size:11px;}
+#attempts .r0 {background-color:#f8f8f7;}
+
+.environmenttable .r0 {background-color: #F7F8FA;} /* Tabelle Serverinformationen */
+.scurityreporttable .r0 {background-color: #F7F8FA;} /* Tabelle Sicherheitsbericht */
+
+
+/* Tabellen Userenrolment */
+.userenrolment .r1 {background-color:#f7f8fa;}
+.userenrolment th {padding-top:1px; padding-bottom:1px;}
+.userenrolment thead tr { border-bottom: 1px solid #B7B7B7; border-top: 1px solid #B7B7B7;}
+.userenrolment td {padding-top:2px;padding-bottom:2px;}
+.groupmanagementtable .select {min-width: 180px;}
+
+
+/* Bewertungsverwaltung */
+.path-grade-report-grader th {border-width: 0 0 1px;}
+.path-grade-report-grader table tr.heading th.header { border-top: 1px solid #dfe0e5;}
+.path-grade-report-grader table tr.avg td.cell, table#user-grades td.controls, .path-grade-report-grader table tr.avg, 
+.path-grade-report-grader table tr.avg td, .path-grade-report-grader table tr.avg th {background-color: #e6e5e6;}
+table#user-grades th.userfield {border-style: solid; border-width: 0 1px 1px 1px;}
+table#user-grades th.categoryitem  {border-bottom:1px solid #dfe0e5;}
+table#user-grades th.item, table#user-grades th.categoryitem, table#user-grades th.courseitem {border-color:#dfe0e5;}
+
+
+/* Bewertungsverwaltung: Teilnehmerübersicht */
+.user-grade .r0 {background-color:#f8f8f7;}
+.user-grade tr, .user-grade th, .user-grade td {border:1px solid #dfe0e5;}
+.user-grade .header {border:1px solid #dfe0e5;}
+.user-grade td.item {border-left: 1px solid #dfe0e5; border-right: 1px solid #dfe0e5;}
+.user-grade td.b1b, .user-grade td.b2b {border-bottom: 1px solid #dfe0e5;}
+.user-grade td.b1l, .user-grade td.b2l {border-left: 1px solid #dfe0e5;}
+.user-grade td.baggt {border-top: 3px double #3D4258;}
+.user-grade thead {border-bottom: 3px double #3D4258;}
+
+
+/* Contentbereich Kursübersicht */
+.path-my .coursebox .overview .name {margin-left: 10px; line-height:17px;}
+.block_course_overview {padding:6px 5px; font-size:12px;}
+.block_course_overview .coursebox_last{border-bottom:0;}
+.block_course_overview h3{padding-left:15px; margin:0.5em 0;}
+.block_course_overview .main a{font-size:14px;}
+.block_course_overview .overview{padding-left:10px;}
+.block_course_overview h2.main {border-color: #B7B7B7; border-style: solid; border-width: 1px 0; font-size: 14px; 
+		font-weight: bold; margin-top: 0; padding: 5px 0 5px 10px; text-align: left;}
+.block_course_overview.block .header h2 {margin:2px 0 2px; font-size:17px; color:#444; font-weight:200;}
+
+.block_vfh_course_overview {padding:6px 5px; font-size:12px;}
+.block_vfh_course_overview .coursebox {border-bottom-width:0px;}
+.block_vfh_course_overview h3{padding-left:15px; margin:0.5em 0;}
+.block_vfh_course_overview .main a{font-size:14px;}
+.block_vfh_course_overview .overview{padding-left:20px;}
+.block_vfh_course_overview h2.main {border-style: solid; border-width: 1px 0; font-size: 14px; 
+		font-weight: bold; margin-top: 0; padding: 5px 0 5px 10px; text-align: left;}
+.block_vfh_course_overview.block .header h2 {margin:2px 0 2px; font-size:17px; color:#444; font-weight:200;}
+
+/* Schlagworte oben im Content */
+.managelink {margin-bottom:7px;}
+
+/* Aufzählung bei Feedback */
+div.feedback_item_number_left, div.feedback_item_left {margin-right: 5px; min-width: 15px;}
+
+
+/* Aus-und Einblenden
+/*.path-course-view .weeks .current, .path-course-view .current td.side, */
+.path-course-view .topics .current, .path-course-view .weeks .current, .path-course-view .current td.side {
+    background-position: top right; background-repeat:repeat-y; background-color:transparent;
+	background-image: url([[pix:theme|current1]]);
+}
+/*.path-course-view .weeks .hidden, .path-course-view .hidden td.side */ 
+.path-course-view .topics .hidden, .path-course-view .weeks .hidden, .path-course-view .hidden td.side {
+    background-position: top right; background-repeat:repeat-y; background-color:transparent;
+	background-image: url([[pix:theme|hidden1]]);
+}
+
+/* Buch im Kurs */
+.book_content {border: 1px solid #b7b7b7; margin:5px 0 5px 0; padding:10px;}
+.path-mod-book .book_chapter_title { font-family: Arial; font-size: 14px; font-weight: bold; color:#666;}
+.path-mod-book img.bigicon  {width:20px;height:20px;}
+
+/* Seiten Bereich blättern */
+.section-navigation {border:1px solid #dfe0e5;}
+
+
+/* Datenbanktabelle */
+.tableself {font-size:11px;}
+.tableself tr {border:solid 1px #b7b7b7; }
+.tableself th {background-color: #f8f8f7; vertical-align:middle; border:solid 1px #b7b7b7;text-align:left;}
+.tableself td {border:solid 1px #b7b7b7; text-align:left; vertical-align:baseline;}
+
+/* -- Datenbank Seitenaufbau + Navigation -- */
+.path-mod-data .fieldadd, .path-mod-data .sortdefault, .path-mod-data .defaulttemplate, 
+#page-mod-data-view .datapreferences, #page-mod-data-preset .presetmapping {text-align: left;}
+#intro .no-overflow {margin-bottom:0px;}
+.tabtree {margin-bottom: 3.5em;}
+.tabtree ul {text-align: center; }
+.tabtree .tabrow0 {width: 100%; margin: 2.5em 0 0.5em 0;}
+.tabtree .tabrow0 li {margin-right: -5px;}
+.tabtree .tabrow0 li.here {font-weight: bold;}
+.tabtree .tabrow0 li.here a {position: relative;z-index: 102;}
+.tabtree .tabrow0 li a {background: #f7f7f7; padding: 8px 6px 5px;border-width: 1px 1px 0;border-style: solid; border-color: #b7b7b7; margin: 0 2px;}
+.tabtree .tabrow0 .here a, .tabtree .tabrow0 .here a:hover {background: transparent;}
+.tabtree .tabrow0 li a:hover {background: #fff;}
+.tabtree .tabrow0 ul, .tabtree .tabrow0 div {font-weight: normal; border-top: 1px solid #bfbfbf; padding: 0.25em 0px; margin: 0px;}
+.tabtree .tabrow0 li.here .empty {display: block; height: 1px; overflow: hidden; padding: 0px; position: absolute; width: 100%; bottom: -6px;}
+.tabtree .tabrow0 .tabrow1 {padding: 6px 0 3px;margin-top: 4px;}
+.tabtree .tabrow1 li a,.tabtree .tabrow1 li a:hover,.tabtree .tabrow1 li a span,.tabtree .tabrow1 li a:hover span {padding: 0 10px;border: none;}
+.tabtree a.nolink,.tabtree .here ul a.nolink,.tabtree a.nolink:hover, .tabtree .here ul a.nolink:hover {color: #888;text-decoration: none;}
+.tabtree .here a.nolink, .tabtree .here ul .here a.nolink, .tabtree .here a.nolink:hover,.tabtree .here ul .here a.nolink:hover {color: black; text-decoration: none;}
+
+.edit-listtemplateheader {margin-top:15px;}
+.littleintro {margin-top:15px; margin-bottom:20px;}
+.notifysuccess {margin-top:15px; margin-bottom:20px;}
+
+.ie7 .tabtree .tabrow0 li {margin-left: 0;}
+.ie7 .tabtree .tabrow0 li.first {margin-right: 0px;}
+.ie7 .tabtree .tabrow0 li.onerow {margin-right: 0;}
+.ie7 .tabtree .tabrow0 a {display: inline-block; padding: 8px 0 0.35em 13px;line-height: 1.5em;}
+.ie7 .tabtree .tabrow0 a span {padding: 10px 1em 8px 0;}
+.ie7 .tabtree .tabrow0 div {top: 2.2em; padding: 0.2em 0; left:0px;}
+.ie7 .tabtree .tabrow0 div.empty {margin-right: 0;}
+.ie7.mod-quiz div.tabtree a span img.iconsmall {margin: 0;vertical-align: baseline;position: relative;top: 2px;}
+.ie6 .tabtree {height: 100%;}
+.ie6 .tabtree .tabrow0 {padding-top: 10px;}
+.ie6 .tabtree .tabrow0 li {margin-left: 0;}
+.ie6 .tabtree .tabrow0 li.first {margin-left: -4px; margin-right: -4px;}
+.ie6 .tabtree .tabrow0 li.last a {margin-right: 0;}
+.ie6 .tabtree .tabrow0 li.onerow {margin-right: 0;}
+.ie6 .tabtree .tabrow0 a {padding: 0 0 0 13px;}
+.ie6 .tabtree .tabrow0 a span {padding: 12px 1em 4px 0;}
+.ie6 .tabtree .tabrow0 div {top: 3.5em; padding: 0.2em 0;}
+
+/* -- Datenbank Tabellen -- */
+.mod-data-default-template {font-size:11px;}
+.mod-data-default-template tr {border:solid 1px #d4d4d5; }
+.mod-data-default-template .template-field {text-align:left;}
+.mod-data-default-template th {background-color: #f8f8f7; vertical-align:middle; border:solid 1px #d4d4d5;text-align:left;}
+.mod-data-default-template td {border:solid 1px #d4d4d5; text-align:left; vertical-align:baseline;}
+
+/* Verlinkte Audiodatei */
+.resourcecontent {margin-bottom:20px;}
+
+
+/* Bearbeitungsfenster */
+.mform fieldset .ffilemanager div {margin-top:0;}
+#id_description_path_row { margin-top: 0;} /* mform Editfenster Fußbereich */
+#id_introeditor_path_row { margin-top: 0;} 
+
+/* -- Korrektur box-Linien im Editor-Bereich z.B. bei Datenbanken -- */
+#page-mod-data-edit .box tr, #page-mod-data-edit .box td, #page-mod-data-edit .box th{border-width:0px;}
+#tempform table.mceLayout {border:1px solid #BBBBBB;}
+#tempform td.mceIframeContainer {border-top:1px solid #bbbbbb; border-bottom:1px solid #bbbbbb;}
+.box .mceEditor .mceLayout {border:1px solid #BBBBBB;}
+#page-mod-data-edit .box .mceEditor td.mceIframeContainer {border-top:1px solid #bbbbbb; border-bottom:1px solid #bbbbbb;}
+
+/* Quickmail */
+#page-Quickmail .mform fieldset.hidden div {margin-left:0;}
+#page-Quickmail .mform fieldset.hidden div div {margin-left:auto;}
+#page-Quickmail  .mform fieldset.hidden div .fitemtitle {padding-top:0px;}
+#page-Quickmail  .mform fieldset.hidden div .felement {margin-left:16%;} 
+
+/* --- Formate für den Quiz-Bereich --- */
+#page-mod-quiz-report .mform fieldset {margin:7px 0;} /* report */
+
+#page-mod-quiz-view .quizinfo, #page-mod-quiz-view #page .quizgradefeedback, #page-mod-quiz-view #page .quizattempt {text-align: left;}
+#page-mod-quiz-view .generaltable.quizattemptsummary {margin-left: 0; margin-right: auto;}
+
+#page-mod-quiz-edit .questionbankwindow div.header {padding: 0.2em; background-color:#747475;}
+#page-mod-quiz-edit .questionbankwindow div.header h2 {color:#fff;}
+#page-mod-quiz-edit h2.main {margin:1em 0; border:none; color:#333;}
+#page-mod-quiz-edit div.quizpage .pagecontent {background-color:#EFEFEF; border:1px solid #BFBFBF; border-radius: 0.3em 0.3em 0.3em 0.3em;}
+
+#page-mod-quiz-edit .quizpagedelete img {background-color: transparent; padding: 0.2em;}
+#page-mod-quiz-edit div.question div.content div.questioncontrols {width:60px} /* Anpassung Größe der Aktion-Icons */
+#page-mod-quiz-edit div.question div.content div.qorder {right:60px;} /* Textfeld eingerückt */
+#page-mod-quiz-edit div.question div.content div.points {right:60px;} /* Punkte-Box weiter nach links geschoben */
+
+#page-mod-quiz-edit div.question div.content .questionpreview a {background-color: transparent;}
+#page-mod-quiz-edit div.quizpage .pagecontent .pagestatus {background-color: #fff; }
+#page-mod-quiz-edit div.quizpage span.pagetitle {color: #333;}
+#page-mod-quiz-edit .invisiblefieldset label { padding-left: 0px; padding-right: 5px;}
+#page-mod-quiz-edit .quizsavegradesform {margin:2px 0 10px 0;}
+#page-mod-quiz-edit div.question div.content div.questioncontrols {background-color: transparent;}
+#page-mod-quiz-edit div.question div.content .singlequestion .questionpreview {background-color: transparent;}
+#page-mod-quiz-edit div.editq div.question div.content, 
+#page-mod-quiz-edit .reorder div.question div.content {border-radius: 0.3em 0.3em 0.3em 0.3em; background-color:#fff; width: 88%;}
+.que .formulation {background-color: transparent; border:1px solid #BFBFBF;}
+.que .info {background: none repeat scroll 0 0 #EFEFEF;} /* linker Infobereich */
+.path-mod-quiz .qnbutton.correct, .que .correct {background-color: #e0ecda;} /* Richtige Antwort */
+.que .notanswered, .que .incorrect {background-color: #ffe0d8;}/* Falsche Antwort */
+.path-mod-quiz .qnbutton.partiallycorrect {background-color: #fff8cd;} /* Hintergrund Aufgaben-Nr. im Block */
+.que .outcome {background: none repeat scroll 0 0 #fff8cd;} /* Kommentar zur Antwort */
+.que.gapselect .qtext {line-height: 2em;} /* Zeilenhöhe der Fragen */
+/* Drag & Drop */
+.que.ddwtos .group1 {background-color:#F7F7F7;}
+.que.ddwtos .draghome, .que.ddwtos .drag.unplaced {border:1px solid #666; color:#333;}
+.que.ddwtos .drop {border:1px solid #999; margin:5px 0;}
+.answercontainer {clear:both;}
+
+/* Bewertungstabelle */
+#page-mod-assign-view .grading .gradingtable table {margin:0px; font-size:11px;}
+#page-mod-assign-view .gradingtable th, #page-mod-assign-view .gradingtable td {padding:0.5em 0.2em;}
+#page-mod-assign-view .gradingtable tr.ygtvrow {border-width:0px;}
+#page-mod-assign-view .gradingtable input[type="checkbox"], #page-mod-assign-view .gradingtable input[type="radio"] {margin-top: 2px;}
+#page-mod-assign-view .gradingtable .c0 div.selectall {margin-left: 0px;}
+#page-mod-assign-view   #page-content.grading #region-main-box{padding-left:35px; padding-right:35px;}
+#page-mod-assign-view   #page-content.grading #region-main{
+		float:left; margin-right:0px; margin-left:0px; position:relative; width:100%; min-height:300px;}
+#page-mod-assign-view #page-content.grading #region-pre {margin-left:0px; right:0px;}
+
+
+/* AJAX Marking Block */
+.yui3-skin-sam .yui3-tabview-panel{background-color:#fff; border-color:#C4C6CD;}
+.yui3-skin-sam .yui3-tabview-list {border-color:#CDCFD6; border-width:0 0 2px; }
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label {border-color:#C4C6CD;}
+.yui3-skin-sam .yui3-tab-label {background-image:none; background-color:#fff;}
+.yui3-skin-sam .yui3-tab-label {border-color:#c4c6cd;}
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label, .yui3-skin-sam .yui3-tab-selected .yui3-tab-label:focus, 
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label:hover {background-color:#DFE0E5; background-position:left 0px;}
+.ygtv-highlight .ygtv-highlight1, .ygtv-highlight .ygtv-highlight1 .ygtvlabel {background-color: #E4ECF7; color:#3D4258;}
