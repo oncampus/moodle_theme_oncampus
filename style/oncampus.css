@@ -18,7 +18,7 @@ h1, h2, h3 {padding-left:2px; margin:0.5em 0;}
 h1.headermain {color: #fff;}
 
 #region-main h1, #region-main h2, #region-main h3 {padding-left: 0px; color:#3D4258;}
-h2.main {color: #3D4258; text-align: left; padding:5px 0 5px 20px; font-size:17px; 
+h2.main {color: #990000;/*3D4258;*/ text-align: left; padding:5px 0 5px 20px; font-size:17px; 
 	margin-top: 0; font-weight:200; border-width:1px 0px; border-style:solid; 
 	border-color:#C4C6CD;}
 h2.headingblock {color: #3D4258; text-align: left; padding:5px 0 5px 20px; 
