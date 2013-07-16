@@ -2,6 +2,7 @@
 
 $hassidepre = $PAGE->blocks->region_has_content('side-pre', $OUTPUT);
 $hassidepost = $PAGE->blocks->region_has_content('side-post', $OUTPUT);
+$hasnavbar = (empty($PAGE->layout_options['nonavbar']) && $PAGE->has_navbar());
 $showsidepre = $hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT);
 $showsidepost = $hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT);
 

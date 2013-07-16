@@ -76,7 +76,7 @@ echo $OUTPUT->doctype() ?>
 						 falls vorhanden (Überschneidende Grafik Kopf-Content-Bereich);
 	     page-visuell -> Div für rechte Hintergrundgrafik, 
 						 falls Grafik im Kopfbereich in den Contentbereich ragt */ ?>
-<div id="page-content" <?php if (($_REQUEST["action"]=="grading") or ($_REQUEST["action"]=="saveoptions")){echo "class='grading'";} ?> >
+<div id="page-content" <?php if (isset($_REQUEST["action"]) and (($_REQUEST["action"]=="grading") or ($_REQUEST["action"]=="saveoptions"))){echo "class='grading'";} ?> >
 	<div id="page-visuell">
 	<div id="region-main-box">
 	    <?php /* Content-Bereich */ ?>

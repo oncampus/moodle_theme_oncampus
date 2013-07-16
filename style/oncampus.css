@@ -15,6 +15,7 @@ p {font-family: Arial; color:#3d4258; margin: 0.5em 0;}
 a {text-decoration: none; color:#ae181a;}
 a:hover {text-decoration: none; color:#6b0a0b;}
 h1, h2, h3 {padding-left:2px; margin:0.5em 0;}
+#region-main .course_category_tree .category > .info h3.name {margin: 3px; padding: 2px 18px;}
 h1.headermain {color: #fff;}
 
 #region-main h1, #region-main h2, #region-main h3 {padding-left: 0px; color:#3D4258;}
@@ -936,3 +937,6 @@ div.feedback_item_number_left, div.feedback_item_left {margin-right: 5px; min-wi
 .sitetopic .section li.activity:hover, .course-content .section li.activity:hover {
     background-color: #f4f4f6; /*#dfe0e5 grau - *#F5F0EA rosa*/
 }
+
+/* User-Profil DEBUG MODE Anpassung Textgröße */
+.userprofile .notifytiny { font-size:1.0em;}
