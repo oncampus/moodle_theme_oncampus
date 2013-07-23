@@ -100,12 +100,14 @@ echo $OUTPUT->doctype() ?>
             </div>
         </div>
     </div>
-  </div></div>
+  </div>
+  <?php if (!empty($coursefooter)) { ?>
+     <div id="course-footer"><?php echo $coursefooter; ?></div>
+  <?php } ?>
+  </div>
  
  <!-- START OF FOOTER -->
-    <?php if (!empty($coursefooter)) { ?>
-        <div id="course-footer"><?php echo $coursefooter; ?></div>
-    <?php } ?>
+    
  
     <?php if ($hasfooter) { ?>
     <div id="page-footer" class="clearer">

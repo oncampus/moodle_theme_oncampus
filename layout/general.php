@@ -94,7 +94,7 @@ echo $OUTPUT->doctype() ?>
   		  <div id="region-main">
             <div class="region-content">
 				<?php echo $coursecontentheader; ?>
-			   <?php echo $OUTPUT->main_content(); ?>
+			    <?php echo $OUTPUT->main_content() ?>
 			    <?php echo $coursecontentfooter; ?>
 			 </div>
   		  </div>
@@ -127,12 +127,13 @@ echo $OUTPUT->doctype() ?>
 		<div class="clearer"></div>
 	</div>
 </div></div>
-</div></div>
+</div>
+<?php if (!empty($coursefooter)) { ?>
+  <div id="course-footer"><?php echo $coursefooter; ?></div>
+<?php } ?>
+</div>
 <!-- START OF FOOTER -->
- <?php if (!empty($coursefooter)) { ?>
-        <div id="course-footer"><?php echo $coursefooter; ?></div>
-    <?php } ?>
-	
+ 
 <?php if ($hasfooter) { ?>
 <div id="page-footer">
 	<div id="footer">

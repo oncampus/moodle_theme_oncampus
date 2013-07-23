@@ -67,7 +67,7 @@ box-shadow:  0px 0px 10px 10px #cbb9ac;
 			  background-repeat:no-repeat; background-position: right -205px; min-height:269px;}
 .pagelayout-redirect #page-visuell {margin-top:0px; padding:15px; top:0px; min-height:269px;}
 
-.headermenu {color:#3D4258; height:100px; margin:10px 10px 0px 10px; }
+.headermenu {color:#3D4258; height:100px; margin:10px 10px 0px 10px;}
 .headermenu a {color:#AE181A;}
 .headermenu a:hover {color:#6B0A0B;}
 .langmenu {margin-top:-90px;}
@@ -1024,11 +1024,11 @@ table.quizreviewsummary td.cell p{margin-top:0px;}
 
 
 /* Glossar Anpassungen */
-.path-mod-glossary  .glossarycategoryheader h2.main{border:none; font-size:2.5em; font-weight:bold;}
+.path-mod-glossary  .glossarycategoryheader h2.main{border:none; font-size:2.0em; font-weight:bold;}
 .path-mod-glossary .glossarypost .entrylowersection .aliases {text-align:left;}
 .path-mod-glossary .glossarypost .entrylowersection {padding-bottom:20px;}
 .path-mod-glossary .glossarypost .entryheader {text-align:left;}
-.path-mod-glossary .glossarypost h3 { font-size: 20px; font-weight: normal; margin:0px; line-height:38px; margin-bottom:10px;}
+.path-mod-glossary .glossarypost h3 { font-size: 18px; font-weight: normal; margin:0px; line-height:38px; margin-bottom:10px;}
 .path-mod-glossary .glossarypost th, .path-mod-glossary .glossarypost td {padding:0px 15px 0px 0px;}
 
 .path-mod-glossary .glossarypost.entrylist h3 { font-size: 15px; font-weight: normal; margin:0px; line-height:20px;}
@@ -1068,3 +1068,7 @@ td.submissionnotgraded, div.submissionnotgraded {background-color: #ddd;}
 #page-repository-manage_instances table.generaltable {width:100%; margin-left:auto;margin-right:auto; border:1px solid #B7B7B7;}
 #page-repository-manage_instances table.generaltable th, #page-repository-manage_instances table.generaltable td {border:none;}
 #page-repository-manage_instances table.generaltable tr {height:26px;}
+
+/* Abbrechen Button */
+.mform .btn-cancel {color:#AE181A;}
+.mform .btn-cancel:hover, .mform .btn-cancel:focus {color:#6B0A0B;}

@@ -11,9 +11,17 @@ $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custom
 
 $bodyclasses = array();
 if ($showsidepre && !$showsidepost) {
-    $bodyclasses[] = 'side-pre-only';
+    if (!right_to_left()) {
+        $bodyclasses[] = 'side-pre-only';
+    }else{
+        $bodyclasses[] = 'side-post-only';
+    }
 } else if ($showsidepost && !$showsidepre) {
-    $bodyclasses[] = 'side-post-only';
+    if (!right_to_left()) {
+        $bodyclasses[] = 'side-post-only';
+    }else{
+        $bodyclasses[] = 'side-pre-only';
+    }
 } else if (!$showsidepost && !$showsidepre) {
     $bodyclasses[] = 'content-only';
 }
