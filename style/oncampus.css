@@ -64,9 +64,10 @@ box-shadow:  0px 0px 10px 10px #cbb9ac;
 				background-repeat:no-repeat; background-position:right 0px;
 				background-image:url([[pix:theme|visuell96dpi]]);}
 #page-visuell{background-image:url([[pix:theme|visuell96dpi]]);	background-color: transparent; 
-			  background-repeat:no-repeat; background-position: right -205px ;}
+			  background-repeat:no-repeat; background-position: right -205px; min-height:269px;}
+.pagelayout-redirect #page-visuell {margin-top:0px; padding:15px; top:0px; min-height:269px;}
 
-.headermenu {color:#3D4258; height:100px; margin:10px 10px 0px 10px;}
+.headermenu {color:#3D4258; height:100px; margin:10px 10px 0px 10px; }
 .headermenu a {color:#AE181A;}
 .headermenu a:hover {color:#6B0A0B;}
 .langmenu {margin-top:-90px;}
@@ -113,6 +114,7 @@ box-shadow:  0px 0px 10px 10px #cbb9ac;
 #sidebars .block .header .title .block_action {margin:2px 2px 1px 0px;}
 #sidebars .block .header .title .block_action input {background-color: #FFF;} 
 #sidebars .block .content {border: 0px; padding: 5px; background-color: #f5f0ea;}
+#sidebars .block_course_overview .content {margin:0px;}
 #sidebars .block .content .block_tree p {font-size: 1em;}
 #sidebars .block h2 {font-size:1.1em; font-weight:bold;}
 #sidebars .block .header h2 {padding:0.1em 0 0 0.2em;}
@@ -138,7 +140,7 @@ box-shadow:  0px 0px 10px 10px #cbb9ac;
 #page-header {clear:both; float:none; width:auto; overflow:visible;}
 #page-content {clear:both;float:none;overflow:hidden; position:relative; width:auto; 
 			   min-width:auto; min-height:450px; background-color: #ffffff;}
-#page-content #region-main-box {float:none; left:auto; position:relative; width:auto; margin-bottom:15px;}
+#page-content #region-main-box {float:none; left:auto; position:relative; width:auto; margin-bottom:15px; background-color:transparent;}
 #page-content #region-main-wrap {float:none; position:relative; right:0px; width:auto;}
 #page-content #region-main {margin-right:0px; margin-left:0px; overflow:hidden; text-align:left;
 						   min-height:300px; padding-bottom:5px; position:relative;}
@@ -170,7 +172,7 @@ box-shadow:  0px 0px 10px 10px #cbb9ac;
 	#page-content #region-main-wrap {width:700px;}
 	#page-content #region-main {width:660px; margin-left:20px;}
 	#page-content, #page-header, #page-footer, .pagelayout-report #page-content {width: 700px; margin: 0 auto;}
-	
+	.content-only #page-content #region-main-box {padding-left: 25px;}
 	#page-content #region-pre {float:left;left:0px;overflow:hidden;position:relative;width:230px;margin-left:10px;}
 	#page-content #region-post {float:left;left:0px;overflow:hidden;position:relative; width:230px;margin-left:10px;}
 	.side-pre-only #page-content #region-main {margin-left:20px;} /* Anpassung ohne rechten Block */
@@ -728,7 +730,14 @@ table.flexible .header {border:1px solid #dfe0e5;}
 table#user-grades th.userfield {border-style: solid; border-width: 0 1px 1px 1px;}
 table#user-grades th.categoryitem  {border-bottom:1px solid #dfe0e5;}
 table#user-grades th.item, table#user-grades th.categoryitem, table#user-grades th.courseitem {border-color:#dfe0e5;}
-
+table#user-grades {width:100%; font-size:11px; margin: 5px 0 0;}
+table#user-grades tr {height:25px;}
+table#user-grades th, table#user-grades .heading td {vertical-align:bottom;}
+table#user-grades th.category {vertical-align:middle;}
+table#user-grades th, table#user-grades td {vertical-align:middle;}
+.path-grade-report-grader table#user-grades tr.heading th.header {border-color#dfe0e5;}
+table#user-grades tr.avg td.cell {background-color:#F7F8FA}
+.urlselect {margin-bottom:5px;} /* Auszahl Bewertungsübersicht */
 
 /* Bewertungsverwaltung: Teilnehmerübersicht */
 .user-grade .r0 {background-color:#f8f8f7;}
@@ -742,24 +751,24 @@ table#user-grades th.item, table#user-grades th.categoryitem, table#user-grades 
 
 
 /* Contentbereich Kursübersicht */
-.path-my .coursebox .overview .name {margin-left: 10px; line-height:17px;}
-.block_course_overview {padding:6px 5px; font-size:12px;}
-.block_course_overview .coursebox_last{border-bottom:0;}
-.block_course_overview h3{padding-left:15px; margin:0.5em 0;}
-.block_course_overview .main a{font-size:14px;}
-.block_course_overview .overview{padding-left:10px;}
-.block_course_overview h2.main {border-color: #B7B7B7; border-style: solid; border-width: 1px 0; font-size: 14px; 
+#region-main .path-my .coursebox .overview .name {margin-left: 10px; line-height:17px;}
+#region-main .block_course_overview {padding:6px 5px; font-size:12px;}
+#region-main .block_course_overview .coursebox_last{border-bottom:0;}
+#region-main .block_course_overview h3{padding-left:15px; margin:0.5em 0;}
+#region-main .block_course_overview .main a{font-size:14px;}
+#region-main .block_course_overview .overview{padding-left:10px;}
+#region-main .block_course_overview h2.main {border-color: #B7B7B7; border-style: solid; border-width: 1px 0; font-size: 14px; 
 		font-weight: bold; margin-top: 0; padding: 5px 0 5px 10px; text-align: left;}
-.block_course_overview.block .header h2 {margin:2px 0 2px; font-size:17px; color:#444; font-weight:200;}
+#region-main .block_course_overview.block .header h2 {margin:2px 0 2px; font-size:17px; color:#444; font-weight:200;}
 
-.block_vfh_course_overview {padding:6px 5px; font-size:12px;}
-.block_vfh_course_overview .coursebox {border-bottom-width:0px;}
-.block_vfh_course_overview h3{padding-left:15px; margin:0.5em 0;}
-.block_vfh_course_overview .main a{font-size:14px;}
-.block_vfh_course_overview .overview{padding-left:20px;}
-.block_vfh_course_overview h2.main {border-style: solid; border-width: 1px 0; font-size: 14px; 
+#region-main .block_vfh_course_overview {padding:6px 5px; font-size:12px;}
+#region-main .block_vfh_course_overview .coursebox {border-bottom-width:0px;}
+#region-main .block_vfh_course_overview h3{padding-left:15px; margin:0.5em 0;}
+#region-main .block_vfh_course_overview .main a{font-size:14px;}
+#region-main .block_vfh_course_overview .overview{padding-left:20px;}
+#region-main .block_vfh_course_overview h2.main {border-style: solid; border-width: 1px 0; font-size: 14px; 
 		font-weight: bold; margin-top: 0; padding: 5px 0 5px 10px; text-align: left;}
-.block_vfh_course_overview.block .header h2 {margin:2px 0 2px; font-size:17px; color:#444; font-weight:200;}
+#region-main .block_vfh_course_overview.block .header h2 {margin:2px 0 2px; font-size:17px; color:#444; font-weight:200;}
 
 /* Schlagworte oben im Content */
 .managelink {margin-bottom:7px;}
@@ -799,14 +808,16 @@ div.feedback_item_number_left, div.feedback_item_left {margin-right: 5px; min-wi
 .path-mod-data .fieldadd, .path-mod-data .sortdefault, .path-mod-data .defaulttemplate, 
 #page-mod-data-view .datapreferences, #page-mod-data-preset .presetmapping {text-align: left;}
 #intro .no-overflow {margin-bottom:0px;}
+
+/* Reiternavigation */
 .tabtree {margin-bottom: 3.5em;}
-.tabtree ul {text-align: center; }
+/* .tabtree ul {text-align: center; }*/
 .tabtree .tabrow0 {width: 100%; margin: 2.5em 0 0.5em 0;}
 .tabtree .tabrow0 li {margin-right: -5px;}
-.tabtree .tabrow0 li.here {font-weight: bold;}
+/*.tabtree .tabrow0 li.here {font-weight: bold;} */
 .tabtree .tabrow0 li.here a {position: relative;z-index: 102;}
-.tabtree .tabrow0 li a {background: #f7f7f7; padding: 8px 6px 5px;border-width: 1px 1px 0;border-style: solid; border-color: #b7b7b7; margin: 0 2px;}
-.tabtree .tabrow0 .here a, .tabtree .tabrow0 .here a:hover {background: transparent;}
+/*.tabtree .tabrow0 li a {background: #f7f7f7; padding: 8px 6px 5px;border-width: 1px 1px 0;border-style: solid; border-color: #b7b7b7; margin: 0 2px;} */
+/*.tabtree .tabrow0 .here a, .tabtree .tabrow0 .here a:hover {background: transparent;} */
 .tabtree .tabrow0 li a:hover {background: #fff;}
 .tabtree .tabrow0 ul, .tabtree .tabrow0 div {font-weight: normal; border-top: 1px solid #bfbfbf; padding: 0.25em 0px; margin: 0px;}
 .tabtree .tabrow0 li.here .empty {display: block; height: 1px; overflow: hidden; padding: 0px; position: absolute; width: 100%; bottom: -6px;}
@@ -814,6 +825,15 @@ div.feedback_item_number_left, div.feedback_item_left {margin-right: 5px; min-wi
 .tabtree .tabrow1 li a,.tabtree .tabrow1 li a:hover,.tabtree .tabrow1 li a span,.tabtree .tabrow1 li a:hover span {padding: 0 10px;border: none;}
 .tabtree a.nolink,.tabtree .here ul a.nolink,.tabtree a.nolink:hover, .tabtree .here ul a.nolink:hover {color: #888;text-decoration: none;}
 .tabtree .here a.nolink, .tabtree .here ul .here a.nolink, .tabtree .here a.nolink:hover,.tabtree .here ul .here a.nolink:hover {color: black; text-decoration: none;}
+
+.tabtree ul {text-align:left;}
+.tabtree li.first {margin-left:20px;}
+.tabtree .tabrow0 li.here {font-size:16px; font-weight: normal;}
+.tabtree li {font-size:14px;}
+.tabtree .tabrow0 li a {background: #f7f7f7; padding: 8px 16px 6px; border-width: 1px 1px 0;border-style: solid; border-color: #b7b7b7; margin: 0 4px;}
+.tabtree .tabrow0 .here a, .tabtree .tabrow0 .here a:hover {background: #fff;}
+
+.ie7 .tabtree .tabrow0 li a {padding: 8px 16px 4px;}
 
 .edit-listtemplateheader {margin-top:15px;}
 .littleintro {margin-top:15px; margin-bottom:20px;}
@@ -872,18 +892,49 @@ div.feedback_item_number_left, div.feedback_item_left {margin-right: 5px; min-wi
 /* --- Formate für den Quiz-Bereich --- */
 #page-mod-quiz-report .mform fieldset {margin:7px 0;} /* report */
 
-#page-mod-quiz-view .quizinfo, #page-mod-quiz-view #page .quizgradefeedback, #page-mod-quiz-view #page .quizattempt {text-align: left;}
-#page-mod-quiz-view .generaltable.quizattemptsummary {margin-left: 0; margin-right: auto;}
+#page-mod-quiz-view .quizinfo, #page-mod-quiz-view #page .quizattempt {text-align: left; margin-bottom:25px;}
+#page-mod-quiz-view #page .quizgradefeedback {text-align: left; margin-top:5px; margin-bottom:5px;}
+#page-mod-quiz-view .generaltable.quizattemptsummary, #page-mod-quiz-view .generaltable.quizsummaryofattempt {margin-left: auto; margin-right: auto; width:100%; margin-top:25px; margin-bottom:10px;}
 
-#page-mod-quiz-edit .questionbankwindow div.header {padding: 0.2em; background-color:#747475;}
-#page-mod-quiz-edit .questionbankwindow div.header h2 {color:#fff;}
+#page-mod-quiz-view .generaltable.quizattemptsummary .lastrow {background-color:#f0f0f0;} /* Änderung seit Moodle 2.5 */
+#page-mod-quiz-view #feedback h2.main {border:none; font-size:15px; margin-top:15px;}
+
+#page-mod-quiz-summary .generaltable.quizsummaryofattempt .r0.lastrow {background-color:#f0f0f0;}
+#page-mod-quiz-summary #region-main h3 {margin-top: 20px;}
+#page-mod-quiz-summary .generaltable.quizsummaryofattempt {margin: 10px auto; width:100%;}
+
+#page-mod-quiz-edit #quizcontentsblock .editq .pagetitle {min-width:5%;}
+
+/* Anpassung Quiz Fragensammlung */
+#page-mod-quiz-edit #quizcontentsblock .editq {margin:25px 0; padding-top:10px;}
+#page-mod-quiz-edit #quizcontentsblock .statusbar {margin:15px 0;}
+/* #page-mod-quiz-edit .questionbankwindow.block {width:25%;} */
+#page-mod-quiz-edit .questionbankwindow.block div.header {padding: 0.2em; background-color:#AE181A;} /* #9E9EA1 */
+#page-mod-quiz-edit .questionbankwindow.block div.header h2 {color:#fff;}
 #page-mod-quiz-edit h2.main {margin:1em 0; border:none; color:#333;}
+#page-mod-quiz-edit .questionbankwindow a#showbankcmd:hover, #page-mod-quiz-edit .questionbankwindow a#hidebankcmd:hover {color:#6B0A0B;}
 #page-mod-quiz-edit div.quizpage .pagecontent {background-color:#EFEFEF; border:1px solid #BFBFBF; border-radius: 0.3em 0.3em 0.3em 0.3em;}
+.questionbankwindow .choosecategory, .questionbankwindow .createnewquestion{padding:0.3em;}
+#page-mod-quiz-edit div.container div.generalbox{padding:12px;}
+.questionbank div.categoryquestionscontainer, .questionbank .categorysortopotionscontainer, .questionbank .categorypagingbarcontainer, .questionbank .categoryselectallcontainer {padding-left:0; padding-right: 0;}
+#page-mod-quiz-edit .questionbankwindow .modulespecificbuttonscontainer {padding:5px 0 5px 0;}
+#page-mod-quiz-edit .questionbankwindow #categoryquestions .r1 {background-color:#efefef;}
+#page-mod-quiz-edit .questionbankwindow .modulespecificbuttonscontainer button, 
+#page-mod-quiz-edit .questionbankwindow .modulespecificbuttonscontainer input.form-submit, 
+#page-mod-quiz-edit .questionbankwindow .modulespecificbuttonscontainer input[type="button"], 
+#page-mod-quiz-edit .questionbankwindow .modulespecificbuttonscontainer input[type="submit"], 
+#page-mod-quiz-edit .questionbankwindow .modulespecificbuttonscontainer input[type="reset"] {margin: 0px 5px 10px 0px;}
+#page-mod-quiz-edit .questionbankwindow hr {margin-top:15px; margin-bottom:15px;}
+
+#page-mod-quiz-edit .questionbankwindow .paging {background-color:#fff;}
+#page-mod-quiz-edit div.questionbank {background-color:#fff;}/* Hintergrundfarbe der angezeigten Fragesammlung */
+#page-mod-quiz-edit .questionbankwindow .bd {border:1px solid #bbb;}/* Rahmen der angezeigten Fragesammlung */
+#page-mod-quiz-edit .categoryinfo {background-color:#F5F0EA;}/* Hintergrundfarbe der Kategorieinfo der angezeigten Fragesammlung */
 
 #page-mod-quiz-edit .quizpagedelete img {background-color: transparent; padding: 0.2em;}
 #page-mod-quiz-edit div.question div.content div.questioncontrols {width:60px} /* Anpassung Größe der Aktion-Icons */
 #page-mod-quiz-edit div.question div.content div.qorder {right:60px;} /* Textfeld eingerückt */
-#page-mod-quiz-edit div.question div.content div.points {right:60px;} /* Punkte-Box weiter nach links geschoben */
+#page-mod-quiz-edit div.question div.content div.points {right:60px; background-color:#d2d4db; border-color:#d2d4db;} /* Punkte-Box weiter nach links geschoben */
 
 #page-mod-quiz-edit div.question div.content .questionpreview a {background-color: transparent;}
 #page-mod-quiz-edit div.quizpage .pagecontent .pagestatus {background-color: #fff; }
@@ -894,6 +945,19 @@ div.feedback_item_number_left, div.feedback_item_left {margin-right: 5px; min-wi
 #page-mod-quiz-edit div.question div.content .singlequestion .questionpreview {background-color: transparent;}
 #page-mod-quiz-edit div.editq div.question div.content, 
 #page-mod-quiz-edit .reorder div.question div.content {border-radius: 0.3em 0.3em 0.3em 0.3em; background-color:#fff; width: 88%;}
+
+#page-question-edit #categoryquestions .header {border-bottom:1px solid #bbb;}
+#page-question-edit #categoryquestions td, #page-question-edit #categoryquestions th {padding:0.4em;}
+
+#page-mod-quiz-review .que.essay .qtype_essay_response.readonly {background-color:transparent;}
+
+table.quizreviewsummary {border:1px solid #BFBFBF; margin-top:0px;}
+table.quizreviewsummary th.cell {background-color:transparent; text-align:left; padding:5px 0px 2px 10px;}
+table.quizreviewsummary td.cell {background-color:transparent; padding:5px 0px 2px 10px;}
+table.quizreviewsummary td.cell p{margin-top:0px;}
+
+.que h2.no {font-size:1em;} /* Frage x vor Aufgabenbereich */
+.que .info div {font-size: 0.85em; margin-top: 0.7em;}
 .que .formulation {background-color: transparent; border:1px solid #BFBFBF;}
 .que .info {background: none repeat scroll 0 0 #EFEFEF;} /* linker Infobereich */
 .path-mod-quiz .qnbutton.correct, .que .correct {background-color: #e0ecda;} /* Richtige Antwort */
@@ -901,6 +965,7 @@ div.feedback_item_number_left, div.feedback_item_left {margin-right: 5px; min-wi
 .path-mod-quiz .qnbutton.partiallycorrect {background-color: #fff8cd;} /* Hintergrund Aufgaben-Nr. im Block */
 .que .outcome {background: none repeat scroll 0 0 #fff8cd;} /* Kommentar zur Antwort */
 .que.gapselect .qtext {line-height: 2em;} /* Zeilenhöhe der Fragen */
+
 /* Drag & Drop */
 .que.ddwtos .group1 {background-color:#F7F7F7;}
 .que.ddwtos .draghome, .que.ddwtos .drag.unplaced {border:1px solid #666; color:#333;}
@@ -940,3 +1005,66 @@ div.feedback_item_number_left, div.feedback_item_left {margin-right: 5px; min-wi
 
 /* User-Profil DEBUG MODE Anpassung Textgröße */
 .userprofile .notifytiny { font-size:1.0em;}
+
+
+/* Formular-Anpassung Moodle 2.5 */
+/* Editor-Anzeigen-Button */
+.mform .felement.feditor .toggle_editor_toolbar {font-size:0.8em;}
+/* Formular Popup-Kalender */
+#dateselector-calendar-content { border: 1px solid #999;} /* Kalenderblock-Rand */
+.yui-skin-sam .yui-calcontainer {background-color: #F5F0EA; padding: 10px;}
+.yui-skin-sam .yui-calendar td.calcell a {color: #AE181A;}
+.yui-skin-sam .yui-calendar .calweekdaycell {color: #3D4258;} /* Beschriftung Kalendertabelle */
+.yui-skin-sam .yui-calendar td.calcell.calcellhover a{background-color: #AE181A; color: #FFF;} /* Kalender Tage Mouseover (Hover-Effekt)*/
+.yui-skin-sam .yui-calendar td.calcell.calcellhover {background-color: #AE181A;} /* Kalender Tage Mouseover (Hover-Effekt)*/
+.yui-skin-sam .yui-calendar td.calcell.selected a {background-color: #FEF8CF; color: #3D4258;} /* Ausgewählter Tag */
+.yui-skin-sam .yui-calendar td.calcell.selected { background-color: #ECE6BD; }/* dunklere Unterlegung des Hintergrundes als leichten Rand */
+.yui-skin-sam .yui-calendar td.calcell.today { background-color: #333;}
+.yui-skin-sam .yui-calendar td.calcell.oom { background-color: #DFE0E5; color:#888;} 
+
+
+/* Glossar Anpassungen */
+.path-mod-glossary  .glossarycategoryheader h2.main{border:none; font-size:2.5em; font-weight:bold;}
+.path-mod-glossary .glossarypost .entrylowersection .aliases {text-align:left;}
+.path-mod-glossary .glossarypost .entrylowersection {padding-bottom:20px;}
+.path-mod-glossary .glossarypost .entryheader {text-align:left;}
+.path-mod-glossary .glossarypost h3 { font-size: 20px; font-weight: normal; margin:0px; line-height:38px; margin-bottom:10px;}
+.path-mod-glossary .glossarypost th, .path-mod-glossary .glossarypost td {padding:0px 15px 0px 0px;}
+
+.path-mod-glossary .glossarypost.entrylist h3 { font-size: 15px; font-weight: normal; margin:0px; line-height:20px;}
+.path-mod-glossary .glossarypost th, .path-mod-glossary .glossarypost.entrylist td {padding-bottom:10px;}
+
+
+/*
+.path-mod-glossary .tabtree ul {text-align:left;}
+.path-mod-glossary .tabtree li.first {margin-left:20px;}
+.path-mod-glossary .tabtree li {font-size:14px;}
+.path-mod-glossary .tabtree li a.nolink {font-weight: normal;}
+.path-mod-glossary .tabtree .tabrow0 li a {background: #f7f7f7; padding: 8px 16px 6px; border-width: 1px 1px 0;border-style: solid; border-color: #b7b7b7; margin: 0 4px;}
+.path-mod-glossary .tabtree .tabrow0 .here a, .tabtree .tabrow0 .here a:hover {background: #fff;}
+*/
+
+
+/* Aufgaben Anpasssung */
+td.submissionnotgraded, div.submissionnotgraded {background-color: #ddd;}
+
+
+/* Mein Profil anpassen */
+.userprofile dl dt {min-width:185px; width = auto;}
+.userprofile .descriptionbox {margin-left:130px;}
+
+/* Anpassung Editor-Fenster (untere Statusleiste) */
+.o2k7Skin .mceStatusbar div {margin-top:0px;}
+
+/* Anpassung Blog Kommentare */
+.comment-link {margin-top:5px;}
+.comment-list li {margin:5px 25px 5px 15px;}
+.forumpost .comment-list .picture img {margin-left:-5px;}
+
+/* Nutzerbedingungen */
+.path-mod-resource .resourcecontent iframe {border:1px solid #bbb;}
+
+/* Repositories */
+#page-repository-manage_instances table.generaltable {width:100%; margin-left:auto;margin-right:auto; border:1px solid #B7B7B7;}
+#page-repository-manage_instances table.generaltable th, #page-repository-manage_instances table.generaltable td {border:none;}
+#page-repository-manage_instances table.generaltable tr {height:26px;}

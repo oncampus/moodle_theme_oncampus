@@ -12,6 +12,16 @@ $showsidepost = ($hassidepost && !$PAGE->blocks->region_completely_docked('side-
 $custommenu = $OUTPUT->custom_menu();
 $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu));
 
+$courseheader = $coursecontentheader = $coursecontentfooter = $coursefooter = '';
+if (empty($PAGE->layout_options['nocourseheaderfooter'])) {
+    $courseheader = $OUTPUT->course_header();
+    $coursecontentheader = $OUTPUT->course_content_header();
+    if (empty($PAGE->layout_options['nocoursefooter'])) {
+        $coursecontentfooter = $OUTPUT->course_content_footer();
+        $coursefooter = $OUTPUT->course_footer();
+    }
+}
+
 $bodyclasses = array();
 if ($showsidepre && !$showsidepost) {
     if (!right_to_left()) {
@@ -42,7 +52,7 @@ echo $OUTPUT->doctype() ?>
     <?php echo $OUTPUT->standard_head_html() ?>
 </head>
  
-<body id="<?php p($PAGE->bodyid); ?>" class="<?php p($PAGE->bodyclasses); ?>">
+<body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 <div id="page">
@@ -64,7 +74,9 @@ echo $OUTPUT->doctype() ?>
             <div id="region-main-wrap" class="colpos">
                     <div id="region-main">
                         <div class="region-content">
-                            <?php echo $OUTPUT->main_content() ?>
+							<?php echo $coursecontentheader; ?>
+                            <?php echo $OUTPUT->main_content(); ?>
+							<?php echo $coursecontentfooter; ?>
                         </div>
                     </div>
                 </div>
@@ -89,7 +101,12 @@ echo $OUTPUT->doctype() ?>
         </div>
     </div>
   </div></div>
- 	
+ 
+ <!-- START OF FOOTER -->
+    <?php if (!empty($coursefooter)) { ?>
+        <div id="course-footer"><?php echo $coursefooter; ?></div>
+    <?php } ?>
+ 
     <?php if ($hasfooter) { ?>
     <div id="page-footer" class="clearer">
 	  <div id="footer">
