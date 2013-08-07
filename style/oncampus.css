@@ -1050,7 +1050,8 @@ td.submissionnotgraded, div.submissionnotgraded {background-color: #ddd;}
 
 
 /* Mein Profil anpassen */
-.userprofile dl dt {min-width:185px; width = auto;}
+.userprofile dl dt {min-width:185px; width:auto;}
+.userprofile dl dd {margin:0 0 0 185px;}
 .userprofile .descriptionbox {margin-left:130px;}
 
 /* Anpassung Editor-Fenster (untere Statusleiste) */
