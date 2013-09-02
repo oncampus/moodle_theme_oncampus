@@ -1073,3 +1073,18 @@ td.submissionnotgraded, div.submissionnotgraded {background-color: #ddd;}
 /* Abbrechen Button */
 .mform .btn-cancel {color:#AE181A;}
 .mform .btn-cancel:hover, .mform .btn-cancel:focus {color:#6B0A0B;}
+
+/* Anpassung Textgröße Tabelle im Adminbereich bei Installation von Plug-ins */
+#page-admin-index #plugins-check .requires ul {font-size:0.8em} /* vorher font-size:0.7em */
+
+/* Anpassung Etherpad Rahmen */
+.box.generalbox div#ePad {border:1px solid #CECECE;} /*#B7B7B7 */
+
+/* Anpassung Textseiten von Moodle - Einschränkung des Textbereiches */
+#page-mod-page-view .generalbox.center {
+	max-width:700px;
+	line-height:18px;
+}
+#page-mod-page-view .generalbox.center .no-overflow {
+	overflow:visible;
+}
