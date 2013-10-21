@@ -61,9 +61,11 @@ echo $OUTPUT->doctype() ?>
 		<div class="headermenu"></div>
 		<?php if ($hasheading || $hasnavbar) { ?>
         <div class="navbar clearfix">
-		  <div id="homeimage"><a href="<?php echo $CFG->wwwroot; ?>" title="Startseite">&nbsp;</a></div>
+		 <?php /*
+		 <div id="homeimage"><a href="<?php echo $CFG->wwwroot; ?>" title="Startseite">&nbsp;</a></div>
 				<div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
-        </div>
+        */ ?>
+		</div>
 		<?php } ?>
       </div></div></div>  
     </div>
