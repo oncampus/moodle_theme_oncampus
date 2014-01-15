@@ -1089,3 +1089,11 @@ td.submissionnotgraded, div.submissionnotgraded {background-color: #ddd;}
 #page-mod-page-view .generalbox.center .no-overflow {
 	overflow:visible;
 }
+/* Anpassung Textseiten von Moodle - Einschränkung des Textbereiches */
+.forumpost .content .posting {
+	max-width:700px;
+	line-height:18px;
+}
+.forumpost .content .posting {
+	overflow:visible;
+}
